@@ -6,6 +6,7 @@ import { FaUniversity } from "react-icons/fa";
 import { PiStudentThin, PiUserThin, PiSpinnerGapBold } from "react-icons/pi";
 import CircleDesign from "../Layouts/CircleDesign";
 import ErrorStrip from "../ErrorStrip";
+import logo from "../../logo.png"
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Login = () => {
   const slowLoadingIndicator = () => {
     setTimeout(() => {
       setMessage(
-        "NOTE:Web Services on the free instance type are automatically spun down after 15 minutes of inactivity. When a new request for a free service comes in, Render spins it up again so it can process the request. This will cause a delay in the response of the first request after a period of inactivity while the instance spins up."
+        "Hello!!"
       );
     }, 4000);
   };
@@ -72,11 +73,9 @@ const Login = () => {
           )}
           <CircleDesign />
           <section className="z-0 mb-4 flex items-center duration-200 gap-2 whitespace-nowrap text-6xl md:text-8xl lg:gap-4">
-            <FaUniversity />
+            <img src={logo} style={{height:"130px"}}></img>
             <h1 className="font-spectral font-semibold  text-slate-900  dark:text-slate-300 ">
-              K
-              <span className="inline-block h-10 w-10 rounded-full bg-violet-900 dark:bg-violet-600 md:h-14 md:w-14 xl:h-14 xl:w-14"></span>
-              llege
+              PEC
             </h1>
           </section>
           <section className="z-0 w-[65%] justify-self-center rounded-lg bg-slate-100 opacity-80 hover:opacity-100 focus:opacity-100 duration-200 dark:bg-[#060913] sm:w-[min(50%,360px)] md:w-[min(40%,360px)] xl:w-[min(23%,360px)] ">

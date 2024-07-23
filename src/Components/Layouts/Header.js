@@ -4,6 +4,7 @@ import { FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import UserContext from "../../Hooks/UserContext";
 import { toast } from "react-toastify";
+import logo from "../../logo.png"
 
 const Header = () => {
   const { setUser, setPaperList } = useContext(UserContext);
@@ -14,16 +15,16 @@ const Header = () => {
     toast.info("Logged Out");
   };
   return (
-    <header className="absolute top-0 flex w-full justify-between bg-slate-950 text-slate-50 dark:bg-slate-950 ">
+    <header className="absolute top-0 flex w-full justify-between bg-slate-50 text-slate-950 dark:bg-slate-950 ">
       <Link
         to="/dash"
         className="ml-4 flex items-center gap-2 px-3 py-1 text-2xl font-semibold sm:text-3xl"
       >
-        <FaUniversity className="m-1" />
-        <h1 className="m-0 pr-1 font-spectral text-slate-50 decoration-violet-500 decoration-[3px] underline-offset-[3px] hover:underline">
-          K
-          <span className="inline-block h-4 w-4 rounded-full bg-violet-500 dark:bg-violet-500 sm:h-[1.15rem] sm:w-[1.15rem]"></span>
-          llege
+
+        {/* <FaUniversity className="m-1" /> */}
+        <img src={logo} style={{height:"40px"}}></img>
+        <h1 className="m-0 pr-1 font-spectral text-slate-950 decoration-violet-500 decoration-[3px] underline-offset-[3px] hover:underline">
+          PEC
         </h1>
       </Link>
       <Link
